@@ -1,12 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+
 const Home = () => {
+	const [myColor, setmyColor] = useState("black");
+
 	return (
 		<>
-			<div style={{ backgroundColor: "grey" }}>red</div>
+			<div onClick={() => setmyColor("red")}>
+				{myColor === "black" ? (
+					<div>{myColor}</div>
+				) : (
+					<div onClick={() => setmyColor("red")}>this is red</div>
+				)}
+			</div>
 			<br></br>
-			<div style={{ backgroundColor: "grey" }}>yellow</div>
+			<div onClick={() => setPie("yellow")}>
+				{pie === "black" ? (
+					<div>{pie}</div>
+				) : (
+					<div onClick={() => setPie("yellow")}>this is yellow</div>
+				)}
+			</div>
 			<br></br>
-			<div style={{ backgroundColor: "grey" }}>green</div>
+			<div onClick={() => setPie("yellow")}>
+				{pie === "black" ? (
+					<div>{pie}</div>
+				) : (
+					<div onClick={() => setPie("yellow")}>this is yellow</div>
+					)}
+			</div>
 		</>
 	);
 };
