@@ -1,34 +1,15 @@
 import React, { useState } from "react";
+import "../../styles/index.css";
 
 const Home = () => {
-	const [myColor, setmyColor] = useState("black");
+	const [myColor, setMyColor] = useState("");
 
 	return (
-		<>
-			<div onClick={() => setmyColor("red")}>
-				{myColor === "black" ? (
-					<div>{myColor}</div>
-				) : (
-					<div onClick={() => setmyColor("red")}>this is red</div>
-				)}
-			</div>
-			<br></br>
-			<div onClick={() => setPie("yellow")}>
-				{pie === "black" ? (
-					<div>{pie}</div>
-				) : (
-					<div onClick={() => setPie("yellow")}>this is yellow</div>
-				)}
-			</div>
-			<br></br>
-			<div onClick={() => setPie("yellow")}>
-				{pie === "black" ? (
-					<div>{pie}</div>
-				) : (
-					<div onClick={() => setPie("yellow")}>this is yellow</div>
-					)}
-			</div>
-		</>
+		<div className="traffic-light">
+			<div className="red-light circle"></div>
+			<div className="yellow-light circle"></div>
+			<div className="green-light circle"></div>
+		</div>
 	);
 };
 
